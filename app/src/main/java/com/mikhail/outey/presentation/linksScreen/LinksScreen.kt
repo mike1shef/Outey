@@ -1,5 +1,6 @@
 package com.mikhail.outey.presentation.linksScreen
 
+
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -11,7 +12,7 @@ import com.mikhail.outey.presentation.linksScreen.components.LinkList
 
 @Composable
 fun LinksScreen(
-    viewModel: LinksViewModel = hiltViewModel()
+    viewModel: LinksViewModel = hiltViewModel(),
     ){
     LaunchedEffect(Unit){
         viewModel.getLinks()
@@ -41,6 +42,6 @@ fun LinksScreen(
                     viewModel.openDialog()
                 }
             )
-        }
+        },
     )
 }
